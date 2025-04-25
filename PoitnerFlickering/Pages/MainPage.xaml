@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="PoitnerFlickering.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PoitnerFlickering.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Spacing="8">
+
+        <Button x:Name="BtnSimple" Content="Open Blank Window" 
+                Background="Transparent"
+                BorderBrush="Red" 
+                Padding="16"
+                PointerEntered="BtnSimple_PointerEntered"
+                PointerMoved="BtnSimple_PointerMoved"
+                PointerExited="BtnSimple_PointerExited"
+                Click="BtnSimple_Click"/>
+
+        <TextBlock x:Name="Status"/>
+
+        <MenuFlyoutSeparator/>
+
+        <!--<Button Content="Testing ToolTip"  ToolTipService.ToolTip="ToolTip Opened"
+                Background="Transparent"
+                BorderBrush="Red" 
+                Padding="16"/>-->
+
+        <AppBarButton Label="MenuFlyout" IsCompact="False" ToolTipService.ToolTip="Sort">
+            <AppBarButton.Flyout>
+                <MenuFlyout>
+                    <MenuFlyoutSubItem Text="MenuFlyoutSubItem">
+                        <MenuFlyoutItem Text="By rating" Tag="rating"/>
+                        <MenuFlyoutItem Text="By match" Tag="match"/>
+                        <MenuFlyoutItem Text="By distance" Tag="distance"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSubItem Text="MenuFlyoutSubItem">
+                        <MenuFlyoutItem Text="By rating" Tag="rating"/>
+                        <MenuFlyoutItem Text="By match" Tag="match"/>
+                        <MenuFlyoutItem Text="By distance" Tag="distance"/>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutItem Text="By rating" Tag="rating"/>
+                    <MenuFlyoutItem Text="By match" Tag="match"/>
+                    <MenuFlyoutItem Text="By distance" Tag="distance"/>
+                </MenuFlyout>
+            </AppBarButton.Flyout>
+        </AppBarButton>
+        
+    </StackPanel>
+
+</Page>
